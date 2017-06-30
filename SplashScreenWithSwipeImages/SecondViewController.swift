@@ -1,66 +1,59 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  SplashScreenWithSwipeImages
 //
-//  Created by apple on 21/06/17.
+//  Created by apple on 30/06/17.
 //  Copyright © 2017 apple. All rights reserved.
 //
 
 import UIKit
-import Foundation
 
-class ViewController: UIViewController,UIGestureRecognizerDelegate {
+class SecondViewController: UIViewController, UIGestureRecognizerDelegate,SlideButtonDelegate {
     
     var swipeImageArray:[String] = []
-
+    
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var splashImageView: UIImageView!
-    @IBOutlet weak var skipButton: UIButton!
     
+    @IBOutlet weak var sliderButton: MMSlidingButton!
     @IBOutlet var swipeRight: UISwipeGestureRecognizer!
     @IBOutlet var swipeLeft: UISwipeGestureRecognizer!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.sliderButton.delegate = self
         addSwipeImages()
-        swipeRight.delegate =  self
-        swipeLeft.delegate =  self
+        customizeSliderButton()
+
         
-        
-        
-    
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.sliderButton.delegate = self
         addSwipeImages()
-        setButtonTitle()
-        
-       splashImageView.image =  UIImage(named: swipeImageArray[0])
-        
+        splashImageView.image =  UIImage(named: swipeImageArray[0])
         pageController.numberOfPages =  swipeImageArray.count
+        
+        customizeSliderButton()
+        
+    }
+    func customizeSliderButton()
+    {
+        //sliderButton.buttonText = "SKIP"
+       // sliderButton.buttonUnlockedText = ""
+
        
+        
+    }
+    func buttonStatus(_ status: String, sender: MMSlidingButton) {
+        
     }
     
     func addSwipeImages(){
         swipeImageArray = ["first_image","second_image","third_image","fourth_image","fifth_image"]
         
- 
-
     }
-    func setButtonTitle()
-    {
-        if (self.pageController.currentPage == (self.swipeImageArray.count - 1))
-        {
-            self.skipButton.titleLabel?.text = "MOVE TO LOGIN PAGE"
-        }
-        else{
-            self.skipButton.titleLabel?.text = "SKIP NOW"
-        }
-        
-        self.view.reloadInputViews()
-
-
-    }
+    
     // here are those protocol methods with Swift syntax
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
@@ -72,7 +65,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     
     @IBAction func swipeToLeft(_ sender: Any) {
         print("swipeLeft")
-        setButtonTitle()
         pageController.currentPage += 1
         
         UIView.transition(with: splashImageView, duration: 0.3, options: .transitionCrossDissolve, animations: {
@@ -84,25 +76,28 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBAction func swipeToRight(_ sender: Any) {
         
         print("swipeRight")
-        setButtonTitle()
         pageController.currentPage -= 1
         
         UIView.transition(with: splashImageView, duration: 0.3, options: .transitionCrossDissolve, animations: {
             self.splashImageView.image = UIImage(named: self.swipeImageArray[self.pageController.currentPage])
             
-                        
+            
         }, completion: nil)
         
         
         
-
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
-

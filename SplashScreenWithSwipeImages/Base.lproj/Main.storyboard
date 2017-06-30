@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fkU-IK-S4y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,5 +94,112 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="bw9-Ym-ute">
+            <objects>
+                <viewController storyboardIdentifier="secondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fkU-IK-S4y" customClass="SecondViewController" customModule="SplashScreenWithSwipeImages" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r5j-We-8QK"/>
+                        <viewControllerLayoutGuide type="bottom" id="vtY-Ov-Zsu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H6n-Ay-vv3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zUH-36-fEV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tRl-nq-JAm" appends="YES" id="nAs-mm-k6f"/>
+                                    <outletCollection property="gestureRecognizers" destination="ime-l7-LBR" appends="YES" id="WlF-lA-2DJ"/>
+                                </connections>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-fI-Bi7">
+                                <rect key="frame" x="0.0" y="583.5" width="375" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="BSx-cg-oMb"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0m-ac-dMf" customClass="MMSlidingButton" customModule="SplashScreenWithSwipeImages" customModuleProvider="target">
+                                <rect key="frame" x="15" y="612" width="345" height="45"/>
+                                <color key="backgroundColor" red="0.26011869310000002" green="0.83526003360000001" blue="0.77313148980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6vP-B2-MWB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dragPointWidth">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dragPointColor">
+                                        <color key="value" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.32968933639999998" green="0.57117528650000005" blue="1" alpha="0.44801476880000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonText" value="SKIP"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="imageName" value="Arrow"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonUnlockedText" value="SKIP"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonUnlockedColor">
+                                        <color key="value" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dragPointTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonCornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zUH-36-fEV" firstAttribute="leading" secondItem="H6n-Ay-vv3" secondAttribute="leading" id="2xw-RT-bZs"/>
+                            <constraint firstAttribute="trailing" secondItem="zUH-36-fEV" secondAttribute="trailing" id="5Ae-tv-ox2"/>
+                            <constraint firstItem="vtY-Ov-Zsu" firstAttribute="top" secondItem="zUH-36-fEV" secondAttribute="bottom" id="DXh-Ve-u6D"/>
+                            <constraint firstAttribute="trailing" secondItem="a3e-fI-Bi7" secondAttribute="trailing" id="IXU-Fu-UeW"/>
+                            <constraint firstItem="u0m-ac-dMf" firstAttribute="leading" secondItem="H6n-Ay-vv3" secondAttribute="leading" constant="15" id="auF-98-KoY"/>
+                            <constraint firstAttribute="bottom" secondItem="u0m-ac-dMf" secondAttribute="bottom" constant="10" id="cm0-G0-fFg"/>
+                            <constraint firstItem="a3e-fI-Bi7" firstAttribute="leading" secondItem="H6n-Ay-vv3" secondAttribute="leading" id="fSm-2t-ZKm"/>
+                            <constraint firstItem="a3e-fI-Bi7" firstAttribute="centerX" secondItem="H6n-Ay-vv3" secondAttribute="centerX" id="gP8-p1-DaI"/>
+                            <constraint firstItem="u0m-ac-dMf" firstAttribute="top" secondItem="a3e-fI-Bi7" secondAttribute="bottom" constant="8.5" id="j6S-Ty-JU4"/>
+                            <constraint firstAttribute="trailing" secondItem="u0m-ac-dMf" secondAttribute="trailing" constant="15" id="mUS-hh-DMO"/>
+                            <constraint firstItem="zUH-36-fEV" firstAttribute="top" secondItem="r5j-We-8QK" secondAttribute="bottom" id="wNK-9n-ZMs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageController" destination="a3e-fI-Bi7" id="FOK-Ji-P1h"/>
+                        <outlet property="sliderButton" destination="u0m-ac-dMf" id="rOc-Hl-eY4"/>
+                        <outlet property="splashImageView" destination="zUH-36-fEV" id="KBp-6S-rpa"/>
+                        <outlet property="swipeLeft" destination="niO-Lb-GyE" id="DX5-SV-GV2"/>
+                        <outlet property="swipeRight" destination="swE-72-V1c" id="lDJ-zi-bsx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5k8-PU-MPf" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="tRl-nq-JAm">
+                    <connections>
+                        <action selector="swipeToRight:" destination="fkU-IK-S4y" id="Ckw-qP-ws3"/>
+                        <outlet property="delegate" destination="fkU-IK-S4y" id="cgG-Oz-Qlq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ime-l7-LBR">
+                    <connections>
+                        <action selector="swipeToLeft:" destination="fkU-IK-S4y" id="xre-3i-pqf"/>
+                        <outlet property="delegate" destination="fkU-IK-S4y" id="kPg-hC-dAd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="924" y="124"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Arrow" width="24" height="22"/>
+    </resources>
 </document>

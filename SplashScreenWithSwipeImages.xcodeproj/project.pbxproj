@@ -12,6 +12,8 @@
 		18B41FA41EFA6E6E00FA0DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B41FA21EFA6E6E00FA0DFD /* Main.storyboard */; };
 		18B41FA61EFA6E6E00FA0DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B41FA51EFA6E6E00FA0DFD /* Assets.xcassets */; };
 		18B41FA91EFA6E6E00FA0DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B41FA71EFA6E6E00FA0DFD /* LaunchScreen.storyboard */; };
+		18B929121F06419200AA24E6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B929111F06419200AA24E6 /* SecondViewController.swift */; };
+		18B929141F06426300AA24E6 /* MMSlidingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B929131F06426300AA24E6 /* MMSlidingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		18B41FA51EFA6E6E00FA0DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18B41FA81EFA6E6E00FA0DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B41FAA1EFA6E6E00FA0DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B929111F06419200AA24E6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		18B929131F06426300AA24E6 /* MMSlidingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSlidingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		18B41F9D1EFA6E6E00FA0DFD /* SplashScreenWithSwipeImages */ = {
 			isa = PBXGroup;
 			children = (
+				18B929131F06426300AA24E6 /* MMSlidingButton.swift */,
 				18B41F9E1EFA6E6E00FA0DFD /* AppDelegate.swift */,
 				18B41FA01EFA6E6E00FA0DFD /* ViewController.swift */,
 				18B41FA21EFA6E6E00FA0DFD /* Main.storyboard */,
 				18B41FA51EFA6E6E00FA0DFD /* Assets.xcassets */,
 				18B41FA71EFA6E6E00FA0DFD /* LaunchScreen.storyboard */,
 				18B41FAA1EFA6E6E00FA0DFD /* Info.plist */,
+				18B929111F06419200AA24E6 /* SecondViewController.swift */,
 			);
 			path = SplashScreenWithSwipeImages;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B929141F06426300AA24E6 /* MMSlidingButton.swift in Sources */,
+				18B929121F06419200AA24E6 /* SecondViewController.swift in Sources */,
 				18B41FA11EFA6E6E00FA0DFD /* ViewController.swift in Sources */,
 				18B41F9F1EFA6E6E00FA0DFD /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +307,7 @@
 				18B41FAF1EFA6E6E00FA0DFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
